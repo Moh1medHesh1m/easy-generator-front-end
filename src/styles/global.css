@@ -1,0 +1,139 @@
+@tailwind base;
+a {
+  @apply text-blue-700;
+}
+a:hover {
+  @apply border-b-2 border-blue-700;
+}
+@tailwind components;
+@tailwind utilities;
+:root {
+  --primary-color: #fff;
+  --secondary-color: #000;
+  --brightRed: hsl(12, 88%, 59%); 
+}
+.content p {
+  @apply my-6;
+}
+
+.content ul {
+  @apply my-6;
+}
+.min-btn-w {
+  width: 75px !important;
+}
+/*typeahead styling*/
+.rbt-menu.dropdown-menu {
+  display: flex !important;
+  flex-direction: column;
+  background-color: white;
+  padding: 16px;
+  border-radius: 0 0 8px 8px;
+  border: 1px solid #e2e8f0;
+  transform: translate(0px, 42px);
+}
+a.dropdown-item {
+  border-bottom: 1px solid hsla(260, 11%, 95%, 1);
+  padding-bottom: 8px;
+}
+a.dropdown-item.rbt-menu-pagination-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 4px;
+  font-weight: 700;
+  font-style: italic;
+}
+.rbt-input-main.rbt-input {
+  border: 0;
+  border-radius: 0.375rem;
+}
+/*Accourdion design */
+  h2[data-testid="flowbite-accordion-heading"]{
+  display: flex !important;
+  flex-shrink: 0 !important;
+  flex-grow: 1 !important;
+  flex-basis: 50vw !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center;
+}
+h2[data-testid="flowbite-accordion-heading"]  [role="progressbar"] {
+ /* border: 1px solid red !important;*/
+  width: 57vw;
+  width: 82%;
+  max-width: 55%;
+}
+
+/*place holder*/
+::-webkit-input-placeholder {
+  color: #bed5eb;
+  font-style: italic;
+}
+::-moz-placeholder {
+  color: #bed5eb;
+  font-style: italic;
+}
+:-ms-input-placeholder {
+  color: #bed5eb;
+  font-style: italic;
+}
+:-moz-placeholder {
+  color: #bed5eb;
+  font-style: italic;
+}
+/* Only the scroll bar */
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0,0,0,.3);
+}
+.pointer{
+  cursor:pointer;
+}
+
+.switch-company{
+    width: 200px !important;
+    padding: 2px 8px !important;
+}  
+.switch-company small{
+  font-weight: 500;
+    color: var(--tw-ring-color);
+    padding-bottom: 8px;
+    display: block;
+}
+/*tooltip css*/
+    
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.loadingPage{
+  position: relative;
+z-index: 8888;
+@apply bg-latte;
+}
