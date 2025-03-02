@@ -3,7 +3,6 @@
 'use client';
 
 import '../../../styles/dashboardCard.css';
-import { HiOutlineHand } from "react-icons/hi";
 
 import React, { useEffect, useState } from 'react';
 import { FaMoon, FaSun } from 'react-icons/fa';

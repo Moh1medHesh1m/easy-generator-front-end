@@ -1,6 +1,5 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
 import React from 'react';
 
 import { useAuthGuard, useGuestGuard } from '@/lib/hooks/guards.hook';

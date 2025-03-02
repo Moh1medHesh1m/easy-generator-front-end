@@ -1,14 +1,11 @@
 'use client';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
-import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 import { setActivePath } from '@/utils/getDashboardPath';
 
 export const SideNav = () => {
-  const dispatch = useAppDispatch();
-  const router = useRouter();
   const [selectedActive, setSelectedActive] = useState(0);
   const pathName = usePathname();
 

@@ -67,7 +67,7 @@ const authSlice = createSlice({
     });
     builder.addCase(
       signUp.fulfilled,
-      (_state: { user: any; accessToken: any; isAuth: boolean; }, _action: PayloadAction<{ user: User; accessToken: string }>) => {
+      (_state: { user: any; accessToken: any; isAuth: boolean; }, _action: PayloadAction<{ user: any; accessToken: string }>) => {
         toast.success('Account registered');
       }
     );
