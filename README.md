@@ -87,6 +87,3 @@ Quickly modify these files to match your project:
 This project is **open-source** under the **MIT License**.
 
 ---
-
-🚀 **Now Your README is Clean, Professional, and Reflects Your Work!**  
-Would you like **badges (e.g., CI/CD, test coverage)** to make it even better? 😊
