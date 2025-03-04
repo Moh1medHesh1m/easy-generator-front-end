@@ -1,6 +1,6 @@
-# 🚀 Next.js + Tailwind CSS + TypeScript Boilerplate
+# 🚀 Next.js + Tailwind CSS + TypeScript Authorization system
 
-A highly optimized **Next.js boilerplate** built for **scalability, performance, and developer experience**. Designed for modern web applications with **best practices**, **structured architecture**, and **production-ready configurations**.
+A highly optimized **Next.js ** built for **scalability, performance, and developer experience**. Designed for modern web applications with **best practices**, **structured architecture**, and **production-ready configurations**.
 
 ---
 
@@ -8,6 +8,7 @@ A highly optimized **Next.js boilerplate** built for **scalability, performance,
 - ⚡ **Next.js App Router** – Optimized for static & dynamic rendering
 - 🔥 **TypeScript** – Type-safe & scalable codebase
 - 🎨 **Tailwind CSS** – Utility-first styling with PostCSS
+- 🏛 **Redux Toolkit** – Scalable state management with Redux best practices
 - ✅ **ESLint & Prettier** – Code linting & formatting for consistency
 - 🦊 **Husky & Lint-Staged** – Enforces pre-commit hooks & best practices
 - 🧪 **Jest & Cypress** – Unit and end-to-end testing setup
@@ -27,6 +28,20 @@ src/
 ├── lib/                # API services, business logic, and hooks
 ├── styles/             # Tailwind CSS global styles
 ├── utils/              # Helper functions & formatters
+├── components/ # Reusable UI components ├
+── lib/ # API services, business logic, and hooks 
+│ ├── hooks/ # Custom React hooks 
+│ │ ├── guards.hook.ts 
+│ │ ├── index.ts 
+│ │ ├── store.hooks.ts 
+│ ├── redux/ # State management using Redux  
+│ │ ├── store.ts 
+│ ├── requests/ # API request handlers 
+│ ├── types/ # TypeScript type definitions 
+│ ├── utils/ # Helper functions & formatters 
+│ ├── validators/ # Validation functions 
+├── styles/ # Tailwind CSS global styles 
+.eslintrc.json # ESLint & Prettier configuration
 public/                 # Static assets (images, favicons)
 .env                    # Environment variables
 tsconfig.json           # TypeScript configuration
