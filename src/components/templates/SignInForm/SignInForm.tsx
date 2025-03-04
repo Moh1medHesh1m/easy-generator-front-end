@@ -1,7 +1,7 @@
 'use client';
 
 import { yupResolver } from '@hookform/resolvers/yup';
-import { Button, Label } from 'flowbite-react';
+import { Button } from 'flowbite-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React from 'react';
@@ -53,9 +53,6 @@ export default function SignInForm() {
             labelText="Password"
             errorMessage={errors.password?.message}
           />
-          <div className="flex items-center gap-2">
-            <Label htmlFor="remember">Remember me</Label>
-          </div>
           <Button type="submit">Submit</Button>
         </form>
       </FormProvider>

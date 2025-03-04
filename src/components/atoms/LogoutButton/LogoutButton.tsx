@@ -1,6 +1,5 @@
 'use client';
 
-import { Button } from 'flowbite-react';
 import { useRouter } from 'next/navigation';
 
 import { useAppDispatch } from '@/lib/hooks';
@@ -16,7 +15,7 @@ function LogoutButton() {
 
   return (
     <li className="my-px">
-      <span className="item-start flex items-center justify-center pr-16 text-lg text-red-400">
+      <span className="flex items-center justify-center pr-16 text-lg text-red-400">
         <svg
           fill="none"
           strokeWidth="2"
@@ -26,12 +25,8 @@ function LogoutButton() {
         >
           <path d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z"></path>
         </svg>
-        <Button
-          onClick={submit}
-          className="bg-transparent  hover:bg-transparent"
-        >
-          <span className="text-primary">Logout</span>
-        </Button>
+    
+          <span className="text-primary ml-5"  onClick={submit}>Logout</span>
       </span>
     </li>
   );

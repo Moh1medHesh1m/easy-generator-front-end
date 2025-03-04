@@ -1,12 +1,13 @@
-'use client';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
+"use client";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
-import { setActivePath } from '@/utils/getDashboardPath';
+import { setActivePath } from "@/utils/getDashboardPath";
 
 export const SideNav = () => {
   const [selectedActive, setSelectedActive] = useState(0);
+  const [isSideNavOpen, setIsSideNavOpen] = useState(false);
   const pathName = usePathname();
 
   useEffect(() => {
@@ -15,20 +16,29 @@ export const SideNav = () => {
   }, [pathName]);
 
   const activeClasses =
-    'flex h-12 flex-row items-center  rounded-lg px-4  bg-gray-100 text-gray-600 hover:bg-gray-100';
+    "flex h-12 flex-row items-center rounded-lg px-4 bg-gray-100 text-gray-600 hover:bg-gray-100";
   const inActiveClasses =
-    'flex h-12 flex-row items-center rounded-lg px-4 text-gray-600 hover:bg-gray-100 bg-red';
+    "flex h-12 flex-row items-center rounded-lg px-4 text-gray-600 hover:bg-gray-100 bg-red";
 
-
+  const toggleSideNav = () => {
+    setIsSideNavOpen(!isSideNavOpen);
+  };
 
   return (
     <>
-      <aside className="fixed inset-y-0 left-0 top-16 max-h-screen w-60 bg-white shadow-md">
+      {/* Toggle Button for Mobile */}
+
+      {/* Side Navigation */}
+      <aside
+        className={`fixed inset-y-0 left-0 top-16 max-h-screen w-60 bg-white shadow-md transform transition-transform duration-200 ease-in-out ${
+          isSideNavOpen ? "translate-x-0" : "-translate-x-full"
+        } lg:translate-x-0`}
+      >
         <div className="flex h-full flex-col justify-between">
           <div className="grow">
-            <div className="p-4 ">
+            <div className="p-4 mt-7  md:mt-1">
               <ul className="flex w-full flex-col space-y-1">
-                <li className="my-px ">
+                <li className="my-px">
                   <Link
                     href="/home"
                     className={
@@ -49,12 +59,32 @@ export const SideNav = () => {
                     <span className="ml-3">Dashboard</span>
                   </Link>
                 </li>
+                {/* Add more navigation items here */}
               </ul>
-
             </div>
           </div>
         </div>
       </aside>
+      <div>
+        <button
+          onClick={toggleSideNav}
+          className="fixed left-4 top-4 z-50 p-2 lg:hidden"
+        >
+          <svg
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            className="h-6 w-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </div>
     </>
   );
 };

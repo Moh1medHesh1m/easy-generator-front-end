@@ -1,7 +1,6 @@
-
 export type AuthState = {
   accessToken: string;
-  user: any | null;
+  user: User | null;
   isAuth: boolean;
 };
 
@@ -11,7 +10,7 @@ export type SignInFormData = {
 };
 
 export type SignInResponseData = {
-  user: any;
+  user: User;
   accessToken: string;
 };
 
@@ -22,3 +21,10 @@ export type SignUpFormData = {
   confirmPassword: string;
 };
 
+export type User = {
+  createdAt: string;
+  email: string;
+  name: string;
+  updatedAt: string;
+  _id: string;
+};

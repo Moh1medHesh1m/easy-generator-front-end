@@ -67,9 +67,7 @@ export default function SignUpForm() {
             labelText="Confirm Password"
             errorMessage={errors.confirmPassword?.message}
           />
-          <div className="flex items-center gap-2">
-            <Label htmlFor="remember">Remember me</Label>
-          </div>
+       
           <Button type="submit">Submit</Button>
         </form>
       </FormProvider>
