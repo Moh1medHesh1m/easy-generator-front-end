@@ -62,28 +62,33 @@ tailwind.config.js      # Tailwind CSS configuration
 
 ## 🛠 Development Workflow
 
+### Installation
+```sh
+yarn
+```
+
 ### Run the Development Server
 ```sh
-npm run dev
+yarn dev
 ```
 This starts the Next.js development server with **hot reloading**.
 
 ### Code Linting & Formatting
 ```sh
-npm run lint
-npm run format
+yarn lint
+yarn format
 ```
 Ensures **clean, error-free, and formatted code**.
 
 ### Run Unit Tests
 ```sh
-npm run test
+yarn test
 ```
 Executes **Jest** unit tests for reliable code.
 
 ### Run End-to-End Tests
 ```sh
-npm run cypress
+yarn cypress
 ```
 Ensures **E2E functionality** using **Cypress**.
 
