@@ -2,7 +2,7 @@
   "name": "next-js-boilerplate",
   "version": "3.7.0",
   "scripts": {
-    "dev": "rm -rf .next && next dev",
+    "dev": "rimraf .next && next dev",
     "build": "next build",
     "start": "next start",
     "build-stats": "cross-env ANALYZE=true npm run build",
